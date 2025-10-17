@@ -5,8 +5,8 @@ use std::env;
 use std::time::SystemTime;
 use tokio::io::AsyncReadExt;
 use tokio::fs;
-use rattler_package_streaming::fs as rattler_fs;
-use tempfile::tempdir;
+use rattler_conda_types::package::IndexJson;
+use rattler_package_streaming::seek as rattler_seek;
 
 #[derive(Parser)]
 #[command(name = "pixi-inspect")]
@@ -50,17 +50,7 @@ async fn main() -> Result<()> {
                 input_path = PathBuf::from(path);
             }
 
-            // Create a temporary directory for extraction
-            let tmp_dir = tempdir()?;
-            let extract_path = tmp_dir.path();
-
-            // Extract the package into the temporary directory
-            rattler_fs::extract(&input_path, extract_path)?;
-
-            // Read the info/index.json file
-            let index_json_path = extract_path.join("info").join("index.json");
-            let index_json_bytes = fs::read(&index_json_path).await?;
-            let index_json: serde_json::Value = serde_json::from_slice(&index_json_bytes)?;
+            let index_json: IndexJson = rattler_seek::read_package_file(&input_path)?;
 
             // Display the JSON
             println!("{}", serde_json::to_string_pretty(&index_json)?);
