@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       optimize-build: ${{ github.event_name == 'push' }}
-      release: ${{ github.event_name == 'push' && github.repository == 'oprinsen/pixi-inspect' && steps.version-metadata.outputs.changed == 'true' }}
+      release: ${{ github.event_name == 'push' && github.repository == 'toprinse/pixi-inspect' && steps.version-metadata.outputs.changed == 'true' }}
       version: ${{ steps.version-metadata.outputs.newVersion }}
     steps:
       - name: Checkout source code
