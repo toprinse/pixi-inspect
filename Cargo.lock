@@ -520,8 +520,7 @@ checksum = "37909eebbb50d72f9059c3b6d82c0463f2ff062c9e95845c43a6c9c0355411be"
 [[package]]
 name = "file_url"
 version = "0.2.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "765662dc0b26e038099a5a1529f5d48443111eea45377c312be892997651710e"
+source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#355df3bca8cc0d6b01e1948db887a4a3bc2241ab"
 dependencies = [
  "itertools",
  "percent-encoding",
@@ -1472,7 +1471,7 @@ dependencies = [
  "once_cell",
  "socket2",
  "tracing",
- "windows-sys 0.60.2",
+ "windows-sys 0.52.0",
 ]
 
 [[package]]
@@ -1551,9 +1550,8 @@ dependencies = [
 
 [[package]]
 name = "rattler_conda_types"
-version = "0.40.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ef45140ce845c50c4d141b425b1de858f5e008af7b3c088520d73c746e4f81d6"
+version = "0.40.2"
+source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#355df3bca8cc0d6b01e1948db887a4a3bc2241ab"
 dependencies = [
  "chrono",
  "core-foundation",
@@ -1593,9 +1591,8 @@ dependencies = [
 
 [[package]]
 name = "rattler_digest"
-version = "1.1.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9f9cc663342e34ff125bb1d9df863ca5e03b58b8bb275b56f2903efec6ce2234"
+version = "1.1.7"
+source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#355df3bca8cc0d6b01e1948db887a4a3bc2241ab"
 dependencies = [
  "blake2",
  "digest",
@@ -1603,6 +1600,7 @@ dependencies = [
  "hex",
  "md-5",
  "serde",
+ "serde_bytes",
  "serde_with",
  "sha2",
  "url",
@@ -1611,8 +1609,7 @@ dependencies = [
 [[package]]
 name = "rattler_macros"
 version = "1.0.11"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "988d5d7ace4fb1d7549008236cf08de95e8ea2f1f80754109324a08c31e6dc6a"
+source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#355df3bca8cc0d6b01e1948db887a4a3bc2241ab"
 dependencies = [
  "quote",
  "syn",
@@ -1620,9 +1617,8 @@ dependencies = [
 
 [[package]]
 name = "rattler_networking"
-version = "0.25.18"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "735a30402dbc0f3657da601c3e61ec0d421eb9c2dc3c06d273ad35074a7cf26b"
+version = "0.25.19"
+source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#355df3bca8cc0d6b01e1948db887a4a3bc2241ab"
 dependencies = [
  "anyhow",
  "async-once-cell",
@@ -1645,9 +1641,8 @@ dependencies = [
 
 [[package]]
 name = "rattler_package_streaming"
-version = "0.23.9"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "936b6716d2e27a05bdcfdef42aa26726d6537244ac773f840a8652788148d674"
+version = "0.23.10"
+source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#355df3bca8cc0d6b01e1948db887a4a3bc2241ab"
 dependencies = [
  "bzip2",
  "chrono",
@@ -1674,8 +1669,7 @@ dependencies = [
 [[package]]
 name = "rattler_redaction"
 version = "0.1.12"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3aa5057629aeb20861919e9ae56875985d58028f3c6f433a20b5ded086e1cec5"
+source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#355df3bca8cc0d6b01e1948db887a4a3bc2241ab"
 dependencies = [
  "reqwest",
  "reqwest-middleware",
@@ -1869,9 +1863,9 @@ dependencies = [
 
 [[package]]
 name = "rustls"
-version = "0.23.32"
+version = "0.23.33"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cd3c25631629d034ce7cd9940adc9d45762d46de2b0f57193c4443b92c6d4d40"
+checksum = "751e04a496ca00bb97a5e043158d23d66b5aabf2e1d5aa2a0aaebb1aafe6f82c"
 dependencies = [
  "once_cell",
  "ring",
@@ -2008,6 +2002,16 @@ dependencies = [
  "serde",
  "serde_core",
  "typeid",
+]
+
+[[package]]
+name = "serde_bytes"
+version = "0.11.19"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a5d440709e79d88e51ac01c4b72fc6cb7314017bb7da9eeff678aa94c10e3ea8"
+dependencies = [
+ "serde",
+ "serde_core",
 ]
 
 [[package]]
@@ -2166,8 +2170,7 @@ checksum = "e3a9fe34e3e7a50316060351f37187a3f546bce95496156754b601a5fa71b76e"
 [[package]]
 name = "simple_spawn_blocking"
 version = "1.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "55c0b0b683828aa9d4f5c0e59b0c856a12c30a65b5f1ca4292664734d76fa9c2"
+source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#355df3bca8cc0d6b01e1948db887a4a3bc2241ab"
 dependencies = [
  "tokio",
 ]
