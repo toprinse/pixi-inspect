@@ -520,7 +520,7 @@ checksum = "37909eebbb50d72f9059c3b6d82c0463f2ff062c9e95845c43a6c9c0355411be"
 [[package]]
 name = "file_url"
 version = "0.2.6"
-source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#355df3bca8cc0d6b01e1948db887a4a3bc2241ab"
+source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#e0faf7ea6902567a75e0db7eeab81f2d4d1977e8"
 dependencies = [
  "itertools",
  "percent-encoding",
@@ -1007,9 +1007,9 @@ dependencies = [
 
 [[package]]
 name = "indexmap"
-version = "2.11.4"
+version = "2.12.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4b0f83760fb341a774ed326568e19f5a863af4a952def8c39f9ab92fd95b88e5"
+checksum = "6717a8d2a5a929a1a2eb43a12812498ed141a0bcfb7e8f7844fbdbe4303bba9f"
 dependencies = [
  "equivalent",
  "hashbrown 0.16.0",
@@ -1190,13 +1190,13 @@ dependencies = [
 
 [[package]]
 name = "mio"
-version = "1.0.4"
+version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "78bed444cc8a2160f01cbcf811ef18cac863ad68ae8ca62092e8db51d51c761c"
+checksum = "69d83b0086dc8ecf3ce9ae2874b2d1290252e2a30720bea58a5c6639b0092873"
 dependencies = [
  "libc",
  "wasi",
- "windows-sys 0.59.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -1436,7 +1436,7 @@ dependencies = [
  "once_cell",
  "socket2",
  "tracing",
- "windows-sys 0.52.0",
+ "windows-sys 0.60.2",
 ]
 
 [[package]]
@@ -1516,7 +1516,7 @@ dependencies = [
 [[package]]
 name = "rattler_conda_types"
 version = "0.40.2"
-source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#355df3bca8cc0d6b01e1948db887a4a3bc2241ab"
+source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#e0faf7ea6902567a75e0db7eeab81f2d4d1977e8"
 dependencies = [
  "chrono",
  "core-foundation",
@@ -1526,7 +1526,7 @@ dependencies = [
  "fxhash",
  "glob",
  "hex",
- "indexmap 2.11.4",
+ "indexmap 2.12.0",
  "itertools",
  "lazy-regex",
  "memmap2",
@@ -1557,7 +1557,7 @@ dependencies = [
 [[package]]
 name = "rattler_digest"
 version = "1.1.7"
-source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#355df3bca8cc0d6b01e1948db887a4a3bc2241ab"
+source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#e0faf7ea6902567a75e0db7eeab81f2d4d1977e8"
 dependencies = [
  "blake2",
  "digest",
@@ -1574,7 +1574,7 @@ dependencies = [
 [[package]]
 name = "rattler_macros"
 version = "1.0.11"
-source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#355df3bca8cc0d6b01e1948db887a4a3bc2241ab"
+source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#e0faf7ea6902567a75e0db7eeab81f2d4d1977e8"
 dependencies = [
  "quote",
  "syn",
@@ -1583,7 +1583,7 @@ dependencies = [
 [[package]]
 name = "rattler_networking"
 version = "0.25.19"
-source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#355df3bca8cc0d6b01e1948db887a4a3bc2241ab"
+source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#e0faf7ea6902567a75e0db7eeab81f2d4d1977e8"
 dependencies = [
  "anyhow",
  "async-once-cell",
@@ -1607,7 +1607,7 @@ dependencies = [
 [[package]]
 name = "rattler_package_streaming"
 version = "0.23.10"
-source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#355df3bca8cc0d6b01e1948db887a4a3bc2241ab"
+source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#e0faf7ea6902567a75e0db7eeab81f2d4d1977e8"
 dependencies = [
  "bzip2",
  "chrono",
@@ -1634,7 +1634,7 @@ dependencies = [
 [[package]]
 name = "rattler_redaction"
 version = "0.1.12"
-source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#355df3bca8cc0d6b01e1948db887a4a3bc2241ab"
+source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#e0faf7ea6902567a75e0db7eeab81f2d4d1977e8"
 dependencies = [
  "reqwest",
  "reqwest-middleware",
@@ -2039,7 +2039,7 @@ dependencies = [
  "chrono",
  "hex",
  "indexmap 1.9.3",
- "indexmap 2.11.4",
+ "indexmap 2.12.0",
  "schemars 0.9.0",
  "schemars 1.0.4",
  "serde_core",
@@ -2066,7 +2066,7 @@ version = "0.9.34+deprecated"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6a8b1a1a2ebf674015cc02edccce75287f1a0130d394307b36743c2f5d504b47"
 dependencies = [
- "indexmap 2.11.4",
+ "indexmap 2.12.0",
  "itoa",
  "ryu",
  "serde",
@@ -2120,7 +2120,7 @@ checksum = "e3a9fe34e3e7a50316060351f37187a3f546bce95496156754b601a5fa71b76e"
 [[package]]
 name = "simple_spawn_blocking"
 version = "1.1.0"
-source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#355df3bca8cc0d6b01e1948db887a4a3bc2241ab"
+source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#e0faf7ea6902567a75e0db7eeab81f2d4d1977e8"
 dependencies = [
  "tokio",
 ]
@@ -2747,15 +2747,6 @@ dependencies = [
 
 [[package]]
 name = "windows-sys"
-version = "0.59.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1e38bc4d79ed67fd075bcc251a1c39b32a1776bbe92e5bef1f0bf1f8c531853b"
-dependencies = [
- "windows-targets 0.52.6",
-]
-
-[[package]]
-name = "windows-sys"
 version = "0.60.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f2f500e4d28234f72040990ec9d39e3a6b950f9f22d3dba18416c35882612bcb"
@@ -3036,7 +3027,7 @@ dependencies = [
  "arbitrary",
  "crc32fast",
  "flate2",
- "indexmap 2.11.4",
+ "indexmap 2.12.0",
  "memchr",
  "time",
  "zopfli",

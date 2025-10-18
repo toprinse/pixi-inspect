@@ -31,21 +31,9 @@ fn main() -> Result<()> {
                 let mut stdin = std::io::stdin();
                 let mut buf = Vec::new();
                 stdin.read_to_end(&mut buf)?;
-                let magic_bytes = &buf[0..4];
-                // https://en.wikipedia.org/wiki/List_of_file_signatures
-                let archive_type = match magic_bytes {
-                    // zip magic number
-                    [0x50, 0x4B, 0x03, 0x04]
-                    | [0x50, 0x4B, 0x05, 0x06]
-                    | [0x50, 0x4B, 0x07, 0x08] => ArchiveType::Conda,
-                    // bz2 magic number
-                    [0x42, 0x5a, 0x68, _] => ArchiveType::TarBz2,
-                    _ => {
-                        return Err(anyhow::anyhow!(
-                            "Unsupported archive type. Magic bytes {magic_bytes:?} don't match any known format"
-                        ));
-                    }
-                };
+                let archive_type = ArchiveType::try_from_magic_bytes(&buf).ok_or(
+                    anyhow::anyhow!("Could not determine magic bytes of package"),
+                )?;
                 let mut reader = std::io::Cursor::new(buf);
                 let content = read_package_file_content(
                     &mut reader,
