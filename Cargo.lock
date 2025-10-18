@@ -520,7 +520,7 @@ checksum = "37909eebbb50d72f9059c3b6d82c0463f2ff062c9e95845c43a6c9c0355411be"
 [[package]]
 name = "file_url"
 version = "0.2.6"
-source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#e0faf7ea6902567a75e0db7eeab81f2d4d1977e8"
+source = "git+https://github.com/conda/rattler?branch=main#276f435cc662ad90056b598f7ad5834adf5d6495"
 dependencies = [
  "itertools",
  "percent-encoding",
@@ -1516,7 +1516,7 @@ dependencies = [
 [[package]]
 name = "rattler_conda_types"
 version = "0.40.2"
-source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#e0faf7ea6902567a75e0db7eeab81f2d4d1977e8"
+source = "git+https://github.com/conda/rattler?branch=main#276f435cc662ad90056b598f7ad5834adf5d6495"
 dependencies = [
  "chrono",
  "core-foundation",
@@ -1557,7 +1557,7 @@ dependencies = [
 [[package]]
 name = "rattler_digest"
 version = "1.1.7"
-source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#e0faf7ea6902567a75e0db7eeab81f2d4d1977e8"
+source = "git+https://github.com/conda/rattler?branch=main#276f435cc662ad90056b598f7ad5834adf5d6495"
 dependencies = [
  "blake2",
  "digest",
@@ -1574,7 +1574,7 @@ dependencies = [
 [[package]]
 name = "rattler_macros"
 version = "1.0.11"
-source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#e0faf7ea6902567a75e0db7eeab81f2d4d1977e8"
+source = "git+https://github.com/conda/rattler?branch=main#276f435cc662ad90056b598f7ad5834adf5d6495"
 dependencies = [
  "quote",
  "syn",
@@ -1583,7 +1583,7 @@ dependencies = [
 [[package]]
 name = "rattler_networking"
 version = "0.25.19"
-source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#e0faf7ea6902567a75e0db7eeab81f2d4d1977e8"
+source = "git+https://github.com/conda/rattler?branch=main#276f435cc662ad90056b598f7ad5834adf5d6495"
 dependencies = [
  "anyhow",
  "async-once-cell",
@@ -1607,7 +1607,7 @@ dependencies = [
 [[package]]
 name = "rattler_package_streaming"
 version = "0.23.10"
-source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#e0faf7ea6902567a75e0db7eeab81f2d4d1977e8"
+source = "git+https://github.com/conda/rattler?branch=main#276f435cc662ad90056b598f7ad5834adf5d6495"
 dependencies = [
  "bzip2",
  "chrono",
@@ -1634,7 +1634,7 @@ dependencies = [
 [[package]]
 name = "rattler_redaction"
 version = "0.1.12"
-source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#e0faf7ea6902567a75e0db7eeab81f2d4d1977e8"
+source = "git+https://github.com/conda/rattler?branch=main#276f435cc662ad90056b598f7ad5834adf5d6495"
 dependencies = [
  "reqwest",
  "reqwest-middleware",
@@ -2120,7 +2120,7 @@ checksum = "e3a9fe34e3e7a50316060351f37187a3f546bce95496156754b601a5fa71b76e"
 [[package]]
 name = "simple_spawn_blocking"
 version = "1.1.0"
-source = "git+https://github.com/pavelzw/rattler?branch=read-package-file-content-public#e0faf7ea6902567a75e0db7eeab81f2d4d1977e8"
+source = "git+https://github.com/conda/rattler?branch=main#276f435cc662ad90056b598f7ad5834adf5d6495"
 dependencies = [
  "tokio",
 ]

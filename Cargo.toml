@@ -9,8 +9,9 @@ serde_json = "1.0"
 anyhow = "1.0"
 # rattler_package_streaming = "0.23.9"
 # rattler_conda_types = "0.40.1"
-rattler_package_streaming = { git = "https://github.com/pavelzw/rattler", branch = "read-package-file-content-public" }
-rattler_conda_types = { git = "https://github.com/pavelzw/rattler", branch = "read-package-file-content-public" }
+# TODO: update to new release once available
+rattler_package_streaming = { git = "https://github.com/conda/rattler", branch = "main" }
+rattler_conda_types = { git = "https://github.com/conda/rattler", branch = "main" }
 
 [dev-dependencies]
 assert_cmd = "2.0.17"
