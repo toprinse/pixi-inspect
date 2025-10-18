@@ -1,12 +1,8 @@
-use clap::{Parser, Subcommand};
 use anyhow::Result;
-use std::path::PathBuf;
-use std::env;
-use std::time::SystemTime;
-use tokio::io::AsyncReadExt;
-use tokio::fs;
-use rattler_conda_types::package::IndexJson;
-use rattler_package_streaming::seek as rattler_seek;
+use clap::{Parser, Subcommand};
+use rattler_conda_types::package::{ArchiveType, IndexJson, PackageFile};
+use rattler_package_streaming::seek::{self as rattler_seek, read_package_file_content};
+use std::{io::Read, path::PathBuf};
 
 #[derive(Parser)]
 #[command(name = "pixi-inspect")]
@@ -25,40 +21,32 @@ enum Commands {
     },
 }
 
-#[tokio::main]
-async fn main() -> Result<()> {
+fn main() -> Result<()> {
     let cli = Cli::parse();
 
     match cli.command {
         Commands::GetInfo { path } => {
             // Resolve input: file on disk or read stdin to a temp file
-            let input_path: PathBuf;
-            let mut remove_after = false;
-            if path == "-" {
-                let mut stdin = tokio::io::stdin();
+            let index_json: IndexJson = if path == "-" {
+                let mut stdin = std::io::stdin();
                 let mut buf = Vec::new();
-                stdin.read_to_end(&mut buf).await?;
-
-                // Create a temporary file with a unique identifier
-                let nanos = SystemTime::now().duration_since(std::time::UNIX_EPOCH)?;
-                let tmp_name = format!("pixi-inspect-{}.conda", nanos.as_nanos());
-                let tmp_path = env::temp_dir().join(tmp_name);
-                fs::write(&tmp_path, &buf).await?;
-                input_path = tmp_path;
-                remove_after = true;
+                stdin.read_to_end(&mut buf)?;
+                let archive_type = ArchiveType::try_from_magic_bytes(&buf).ok_or(
+                    anyhow::anyhow!("Could not determine magic bytes of package"),
+                )?;
+                let mut reader = std::io::Cursor::new(buf);
+                let content = read_package_file_content(
+                    &mut reader,
+                    archive_type,
+                    IndexJson::package_path(),
+                )?;
+                IndexJson::from_str(&String::from_utf8_lossy(&content))?
             } else {
-                input_path = PathBuf::from(path);
-            }
-
-            let index_json: IndexJson = rattler_seek::read_package_file(&input_path)?;
+                rattler_seek::read_package_file(&PathBuf::from(path))?
+            };
 
             // Display the JSON
             println!("{}", serde_json::to_string_pretty(&index_json)?);
-
-            // Cleanup temp file if used
-            if remove_after {
-                let _ = fs::remove_file(input_path).await;
-            }
 
             Ok(())
         }
