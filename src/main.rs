@@ -34,12 +34,12 @@ fn main() -> Result<()> {
                 let magic_bytes = &buf[0..4];
                 // https://en.wikipedia.org/wiki/List_of_file_signatures
                 let archive_type = match magic_bytes {
-                    // ZIP magic number (PK) - Modern conda format
+                    // zip magic number
                     [0x50, 0x4B, 0x03, 0x04]
                     | [0x50, 0x4B, 0x05, 0x06]
                     | [0x50, 0x4B, 0x07, 0x08] => ArchiveType::Conda,
-                    // Gzip magic number - Legacy format
-                    [0x1f, 0x8b, _, _] => ArchiveType::TarBz2,
+                    // bz2 magic number
+                    [0x42, 0x5a, 0x68, _] => ArchiveType::TarBz2,
                     _ => {
                         return Err(anyhow::anyhow!(
                             "Unsupported archive type. Magic bytes {magic_bytes:?} don't match any known format"
