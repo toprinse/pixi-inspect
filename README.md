@@ -1,11 +1,11 @@
 # pixi-inspect
 
-This project provides a command-line tool to inspect conda packages and extract metadata from their `index.json` file.  
+This project provides a command-line tool to inspect conda packages and extract metadata from their `index.json` file.
 It is designed to work well with [Pixi](https://pixi.sh/latest/) and CI/CD workflows.
 
 ## Description
 
-`pixi-inspect` analyzes a conda package (either from disk or stdin) and extracts metadata from its `index.json`.  
+`pixi-inspect` analyzes a conda package (either from disk or stdin) and extracts metadata from its `index.json`.
 It uses the [rattler_package_streaming](https://github.com/mamba-org/rattler) crate for robust extraction and parsing.
 
 ## Installation
@@ -61,7 +61,6 @@ pixi-inspect --help
 - ✅ Reads from file or stdin
 - ✅ Displays pretty-printed JSON
 - ✅ Robust error handling
-- ✅ Automatic cleanup of temporary files
 
 ## Metadata Structure
 
@@ -86,7 +85,7 @@ A typical `index.json` looks like:
 src/
 └── main.rs          # CLI entry point, extraction and parsing logic
 ```
-> Extraction and parsing are now handled directly in `main.rs` using rattler_package_streaming.  
+> Extraction and parsing are now handled directly in `main.rs` using rattler_package_streaming.
 
 ## Use Cases
 
