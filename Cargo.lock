@@ -150,9 +150,9 @@ checksum = "72b3254f16251a8381aa12e40e3c4d2f0199f8c6508fbecb9d91f575e0fbb8c6"
 
 [[package]]
 name = "bitflags"
-version = "2.9.4"
+version = "2.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2261d10cca569e4643e526d8dc2e62e433cc8aba21ab764233731f8d369bf394"
+checksum = "812e12b5285cc515a9c72a5c1d3b6d46a19dac5acfef5265968c166106e31dd3"
 
 [[package]]
 name = "blake2"
@@ -452,7 +452,7 @@ dependencies = [
  "libc",
  "option-ext",
  "redox_users",
- "windows-sys 0.61.2",
+ "windows-sys 0.60.2",
 ]
 
 [[package]]
@@ -508,7 +508,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "39cab71617ae0d63f51a36d69f866391735b51691dbda63cf6f96d042b63efeb"
 dependencies = [
  "libc",
- "windows-sys 0.61.2",
+ "windows-sys 0.60.2",
 ]
 
 [[package]]
@@ -520,7 +520,8 @@ checksum = "37909eebbb50d72f9059c3b6d82c0463f2ff062c9e95845c43a6c9c0355411be"
 [[package]]
 name = "file_url"
 version = "0.2.6"
-source = "git+https://github.com/conda/rattler?branch=main#276f435cc662ad90056b598f7ad5834adf5d6495"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "765662dc0b26e038099a5a1529f5d48443111eea45377c312be892997651710e"
 dependencies = [
  "itertools",
  "percent-encoding",
@@ -1292,7 +1293,7 @@ checksum = "8b870d8c151b6f2fb93e84a13146138f05d02ed11c7e7c54f8826aaaf7c9f184"
 
 [[package]]
 name = "pixi-inspect"
-version = "2.0.1"
+version = "2.0.2"
 dependencies = [
  "anyhow",
  "assert_cmd",
@@ -1515,8 +1516,9 @@ dependencies = [
 
 [[package]]
 name = "rattler_conda_types"
-version = "0.40.2"
-source = "git+https://github.com/conda/rattler?branch=main#276f435cc662ad90056b598f7ad5834adf5d6495"
+version = "0.40.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c6fa6244d54b84269d3121d463db4e154c5664936e98817ef44e4fba1f575c3a"
 dependencies = [
  "chrono",
  "core-foundation",
@@ -1557,7 +1559,8 @@ dependencies = [
 [[package]]
 name = "rattler_digest"
 version = "1.1.7"
-source = "git+https://github.com/conda/rattler?branch=main#276f435cc662ad90056b598f7ad5834adf5d6495"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "886e9a6254e74a830c2b8555e14862d6b2f4cc498b43767d4adf1c71421a4796"
 dependencies = [
  "blake2",
  "digest",
@@ -1574,7 +1577,8 @@ dependencies = [
 [[package]]
 name = "rattler_macros"
 version = "1.0.11"
-source = "git+https://github.com/conda/rattler?branch=main#276f435cc662ad90056b598f7ad5834adf5d6495"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "988d5d7ace4fb1d7549008236cf08de95e8ea2f1f80754109324a08c31e6dc6a"
 dependencies = [
  "quote",
  "syn",
@@ -1582,8 +1586,9 @@ dependencies = [
 
 [[package]]
 name = "rattler_networking"
-version = "0.25.19"
-source = "git+https://github.com/conda/rattler?branch=main#276f435cc662ad90056b598f7ad5834adf5d6495"
+version = "0.25.20"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "de790ad7985f3ee85bae3175b203af2152c1c86d9efe1249ac8ff1863466d2e6"
 dependencies = [
  "anyhow",
  "async-once-cell",
@@ -1606,8 +1611,9 @@ dependencies = [
 
 [[package]]
 name = "rattler_package_streaming"
-version = "0.23.10"
-source = "git+https://github.com/conda/rattler?branch=main#276f435cc662ad90056b598f7ad5834adf5d6495"
+version = "0.23.11"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ed3dfb861d216425ddb768857b7d50bf548c2b1fe9421caa7071ca655b0423af"
 dependencies = [
  "bzip2",
  "chrono",
@@ -1634,7 +1640,8 @@ dependencies = [
 [[package]]
 name = "rattler_redaction"
 version = "0.1.12"
-source = "git+https://github.com/conda/rattler?branch=main#276f435cc662ad90056b598f7ad5834adf5d6495"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3aa5057629aeb20861919e9ae56875985d58028f3c6f433a20b5ded086e1cec5"
 dependencies = [
  "reqwest",
  "reqwest-middleware",
@@ -1823,7 +1830,7 @@ dependencies = [
  "errno",
  "libc",
  "linux-raw-sys",
- "windows-sys 0.61.2",
+ "windows-sys 0.60.2",
 ]
 
 [[package]]
@@ -2120,7 +2127,8 @@ checksum = "e3a9fe34e3e7a50316060351f37187a3f546bce95496156754b601a5fa71b76e"
 [[package]]
 name = "simple_spawn_blocking"
 version = "1.1.0"
-source = "git+https://github.com/conda/rattler?branch=main#276f435cc662ad90056b598f7ad5834adf5d6495"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "55c0b0b683828aa9d4f5c0e59b0c856a12c30a65b5f1ca4292664734d76fa9c2"
 dependencies = [
  "tokio",
 ]
@@ -2241,7 +2249,7 @@ dependencies = [
  "getrandom 0.3.4",
  "once_cell",
  "rustix",
- "windows-sys 0.61.2",
+ "windows-sys 0.60.2",
 ]
 
 [[package]]
