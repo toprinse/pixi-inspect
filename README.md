@@ -1,5 +1,12 @@
 # pixi-inspect
 
+[![Conda Platform][conda-badge]][conda-url]
+[![Conda Downloads][conda-downloads-badge]][conda-url]
+
+[conda-url]: https://prefix.dev/channels/conda-forge/packages/pixi-inspect
+[conda-badge]: https://img.shields.io/conda/pn/conda-forge/pixi-inspect?style=flat-square&logoColor=white&logo=conda-forge
+[conda-downloads-badge]: https://img.shields.io/conda/dn/conda-forge/pixi-inspect?style=flat-square
+
 This project provides a command-line tool to inspect conda packages and extract metadata from their `index.json` file.
 It is designed to work well with [Pixi](https://pixi.sh/latest/) and CI/CD workflows.
 
@@ -9,6 +16,14 @@ It is designed to work well with [Pixi](https://pixi.sh/latest/) and CI/CD workf
 It uses the [rattler_package_streaming](https://github.com/mamba-org/rattler) crate for robust extraction and parsing.
 
 ## Installation
+
+You can install `pixi-inspect` from conda-forge using `pixi`:
+
+```bash
+pixi global install pixi-inspect
+```
+
+## Installation from source
 
 ### Prerequisites
 - Rust 1.70+ and Cargo
